@@ -6,7 +6,7 @@ import {LanguageSelect} from './language-select';
 import {pageUrl} from './urls';
 import {siteContent,socialLinks} from './site-content';
 export default function OfficialHome(){
- const {lang,setLang,c}=useLanguage();const t=siteContent[lang];const [active,setActive]=useState(0);const [photo,setPhoto]=useState<number|null>(null);const dialog=useRef<HTMLDialogElement>(null);const groups=[[2,1],[4,3],[5],[6,7]];const [frame,setFrame]=useState(0);const images=groups[active];const selected=images[frame];
+ const {lang,setLang,c}=useLanguage();const t=siteContent[lang];const [active,setActive]=useState(0);const [photo,setPhoto]=useState<number|null>(null);const dialog=useRef<HTMLDialogElement>(null);const groups=[[2,1,8,9],[4,3],[5,10,11],[6,7,13,14,12]];const [frame,setFrame]=useState(0);const images=groups[active];const selected=images[frame];
  useEffect(()=>{document.title=c.brand+' | '+t.official},[c.brand,t.official]);
  useEffect(()=>{if(photo!==null)dialog.current?.showModal();else dialog.current?.close()},[photo]);
  // Keep legacy links from the game that target /#feedback useful.
